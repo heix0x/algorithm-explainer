@@ -1,5 +1,7 @@
 # algorithm-explainer
 
+**English:** An AI agent skill that teaches algorithms until you can hand-work them — minimal examples, executable metaphors, step-by-step state tables.
+
 把算法题讲到你能自己拿笔算完 —— 一个给 AI agent 用的算法讲解 skill。
 
 ## 安装
