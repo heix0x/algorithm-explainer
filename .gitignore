@@ -1,0 +1,21 @@
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地临时与实验
+*.tmp
+*.log
+.tmp/
+scratch/
+
+# Python（如果以后加辅助脚本）
+__pycache__/
+*.py[cod]
+.venv/
