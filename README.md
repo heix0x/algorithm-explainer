@@ -2,6 +2,40 @@
 
 把算法题讲到你能自己拿笔算完 —— 一个给 AI agent 用的算法讲解 skill。
 
+## 安装
+
+把这段发给你正在用的 AI 助手：
+
+```
+把 https://github.com/heix0x/algorithm-explainer 装到你的 skills 目录，
+读一下它的 SKILL.md，装好告诉我
+```
+
+不用配置，只有一个 `SKILL.md`，没有外部依赖。
+
+<details>
+<summary>手动装</summary>
+
+```bash
+git clone https://github.com/heix0x/algorithm-explainer.git ~/.workbuddy/skills/algorithm-explainer
+```
+
+其他客户端换成对应的 skills 目录即可。如果那儿已经有同名目录（比如之前建过目录联接），先把旧目录摘掉再克隆。
+</details>
+
+## 用法
+
+装好之后直接说人话，不用记 `/` 命令：
+
+| 你说 | 它做 |
+|---|---|
+| 「用大白话给我讲讲最大子段和」 | 按七步走：定锚点 → 小例子 → 比喻 → 逐步演示 → 公式 → 题眼 → 反例 |
+| 「动态规划我听不懂，从零讲一遍」 | 先问你会什么、拿哪个当参照，找到锚点再开讲，不硬灌 |
+| 「这道题我算错了，帮我看看错在哪」 | 定位到具体状态转移，指出错在哪一格，而不是重讲一遍 |
+| 「KMP 到底在跳什么」 | 用一个 5 字符的串演示，画出 next 数组怎么变 |
+
+只说「讲讲动态规划」这种没指定题目的，它会先问讲哪一道，不替你挑。
+
 ## 它解决什么
 
 让 AI 讲算法，最常见的失败是这三种：
@@ -15,32 +49,6 @@
 这个 skill 把这三条写成**红线**，并规定一套七步流程。核心主张只有一句：
 
 > **先让手能跟着做，再让脑子知道为什么，最后才给符号。**
-
-## 安装
-
-克隆到 agent 的 skills 目录即可，它没有外部依赖，只要 `SKILL.md` 一个文件。
-
-```bash
-# macOS / Linux
-git clone https://github.com/heix0x/algorithm-explainer.git ~/.workbuddy/skills/algorithm-explainer
-```
-
-```powershell
-# Windows PowerShell
-git clone https://github.com/heix0x/algorithm-explainer.git "$env:USERPROFILE\.workbuddy\skills\algorithm-explainer"
-```
-
-如果目标目录已存在（比如之前建过目录联接），先把旧目录摘掉再克隆。
-
-## 用法
-
-```
-/algorithm-explainer 最大子段和
-/algorithm-explainer 讲讲 KMP
-/algorithm-explainer 动态规划
-```
-
-带具体题目时直接开讲；只说"讲讲动态规划"这种没指定题目的，它会先问讲哪一道，不自己替你挑。
 
 ## 七步流程
 
@@ -92,6 +100,6 @@ git clone https://github.com/heix0x/algorithm-explainer.git "$env:USERPROFILE\.w
 ## 附录（可选）          ← 复杂度、代码、边界讨论
 ```
 
-## 许可
+## License
 
 MIT
